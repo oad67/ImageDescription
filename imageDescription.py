@@ -8,7 +8,7 @@ st.title("Image Description App -- OApps")
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 if uploaded_file:
     image = Image.open(uploaded_file)
-    st.image(image, caption="Uploaded Image", use_column_width=True)
+    st.image(image, caption="Uploaded Image", use_container_width=False)
 
     # Load Hugging Face multimodal pipeline (e.g., BLIP)
     descriptor = pipeline(
@@ -21,6 +21,6 @@ if uploaded_file:
     # Add additional prompts or tasks here if desired
 
 # Instructions
-st.write("This app generates a description for your uploaded image using a Hugging Face multimodal model (BLIP).")
+st.write("-----")
 
 
