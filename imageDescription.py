@@ -2,7 +2,7 @@ import streamlit as st
 from transformers import pipeline
 from PIL import Image
 
-st.title("Image Description App with Hugging Face")
+st.title("Image Description App -- OApps")
 
 # Upload image
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
@@ -23,8 +23,4 @@ if uploaded_file:
 # Instructions
 st.write("This app generates a description for your uploaded image using a Hugging Face multimodal model (BLIP).")
 
-# To run, save this to app.py and use
-# streamlit run app.py
 
-# Required packages:
-# pip install streamlit transformers Pillow
